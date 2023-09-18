@@ -2,6 +2,7 @@
 = Java JWT: JSON Web Token for Java and Android
 :project-version: JJWT_RELEASE_VERSION
 :toc:
+:toc-title:
 :toc-placement!:
 :toclevels: 4
 
@@ -39,7 +40,12 @@ and is supported and maintained by a https://github.com/jwtk/jjwt/graphs/contrib
 
 JJWT is open source under the terms of the http://www.apache.org/licenses/LICENSE-2.0[Apache 2.0 License].
 
+====
+[discrete]
+== Table of Contents
+---
 toc::[]
+====
 
 +++<a name="features">++++++</a>+++
 

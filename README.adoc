@@ -7,10 +7,10 @@
 
 ifdef::env-github[]
 :tip-caption: :bulb: Tip
-:note-caption: :information_source:{nbsp}NOTE
-:important-caption: :heavy_exclamation_mark:{nbsp}IMPORTANT
-:caution-caption: :fire:{nbsp}CAUTION
-:warning-caption: :warning:{nbsp}WARNING
+:note-caption: :information_source:NOTE
+:important-caption: :heavy_exclamation_mark:IMPORTANT
+:caution-caption: :fire:CAUTION
+:warning-caption: :warning:WARNING
 endif::[]
 
 image:https://github.com/jwtk/jjwt/actions/workflows/ci.yml/badge.svg?branch=master[Build Status,link=https://github.com/jwtk/jjwt/actions/workflows/ci.yml?query=branch%3Amaster]

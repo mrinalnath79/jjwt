@@ -14,6 +14,11 @@ ifdef::env-github[]
 :warning-caption: :warning:WARNING
 endif::[]
 
+// Macros
+:fn-require-java8-plus: Requires Java 8 or a compatible JCA Provider (like BouncyCastle) in the runtime classpath.
+:fn-require-java11-plus: Requires Java 11 or a compatible JCA Provider (like BouncyCastle) in the runtime classpath.
+:fn-require-java15-plus: Requires Java 15 or a compatible JCA Provider (like BouncyCastle) in the runtime classpath.
+
 image:https://github.com/jwtk/jjwt/actions/workflows/ci.yml/badge.svg?branch=master[Build Status,link=https://github.com/jwtk/jjwt/actions/workflows/ci.yml?query=branch%3Amaster]
 image:https://coveralls.io/repos/github/jwtk/jjwt/badge.svg?branch=master[Coverage Status,link=https://coveralls.io/github/jwtk/jjwt?branch=master]
 image:https://snyk-widget.herokuapp.com/badge/mvn/io.jsonwebtoken/jjwt-root/badge.svg[Vuln score,link=https://snyk-widget.herokuapp.com/badge/mvn/io.jsonwebtoken/jjwt-root/badge.svg]
@@ -104,11 +109,9 @@ and conditional branch variant in the entire codebase is tested and required to 
 | Edwards-curve Digital Signature Algorithm^*2*^
 |===
 +
-^*1*. Requires Java 11 or a compatible JCA Provider (like BouncyCastle) in the runtime classpath.^
+^*1.*{sp}{fn-require-java11-plus}^
 +
-^*2*. Requires Java 15 or a compatible JCA Provider (like BouncyCastle) in the runtime classpath.^
-
-* Creating, parsing and decrypting encrypted compact JWTs (aka JWEs) with all standard JWE encryption algorithms:
+^*2*.{sp}{fn-require-java15-plus}^
 +
 |===
 | Identifier | Encryption Algorithm
@@ -132,7 +135,7 @@ and conditional branch variant in the entire codebase is tested and required to 
 | AES GCM using 256-bit key^*3*^
 |===
 +
-^*3*. Requires Java 8 or a compatible JCA Provider (like BouncyCastle) in the runtime classpath.^
+^*3.*{sp}{fn-require-java8-plus}^
 
 * All Key Management Algorithms for obtaining JWE encryption and decryption keys:
 +
@@ -191,7 +194,7 @@ and conditional branch variant in the entire codebase is tested and required to 
 | PBES2 with HMAC SHA-512 and "A256KW" wrapping^*4*^
 |===
 +
-^*4*. Requires Java 8 or a compatible JCA Provider (like BouncyCastle) in the runtime classpath.^
+^*4.*{sp}{fn-require-java8-plus}^
 
 * Creating, parsing and verifying JSON Web Keys (JWKs) in all standard JWA key formats using native Java `Key` types:
 +
@@ -235,9 +238,9 @@ and conditional branch variant in the entire codebase is tested and required to 
 | `OctetPrivateJwk`
 |===
 +
-^*5*. Requires Java 11 or a compatible JCA Provider (like BouncyCastle) in the runtime classpath.^
+^*5.*{sp}{fn-require-java11-plus}^
 +
-^*6*. Requires Java 15 or a compatible JCA Provider (like BouncyCastle) in the runtime classpath.^
+^*6.*{sp}{fn-require-java15-plus}^
 
 * Convenience enhancements beyond the specification such as
  ** Payload compression for any large JWT, not just JWEs
@@ -1607,9 +1610,9 @@ key algorithms:
 | Edwards-Curve Digital Signature Algorithm (EdDSA)^*2*^
 |===
 
-^*1*. Requires Java 11 or a compatible JCA Provider (like BouncyCastle) in the runtime classpath.^
+^*1.*{sp}{fn-require-java11-plus}^
 
-^*2*. Requires Java 15 or a compatible JCA Provider (like BouncyCastle) in the runtime classpath.^
+^*2.*{sp}{fn-require-java15-plus}^
 
 These are all represented as constants in the `io.jsonwebtoken.Jwts.SIG` convenience class.
 
@@ -2227,7 +2230,7 @@ The JWT specification defines 6 standard Authenticated Encryption algorithms use
 | AES GCM using 256-bit key^*1*^
 |===
 
-^+++<b>+++1. +++</b>+++Requires Java 8+ or a compatible JCA Provider (like BouncyCastle) in the runtime classpath.^
+^*1.*{sp}{fn-require-java8-plus}^
 
 These are all represented as constants in the `io.jsonwebtoken.Jwts.ENC` registry singleton as
 implementations of the `io.jsonwebtoken.security.AeadAlgorithm` interface.
@@ -2374,7 +2377,7 @@ Content Encryption Key (CEK):
 | PBES2 with HMAC SHA-512 and "A256KW" wrapping^*3*^
 |===
 
-^*3*. Requires Java 8 or a compatible JCA Provider (like BouncyCastle) in the runtime classpath.^
+^*3.*{sp}{fn-require-java8-plus}^
 
 These are all represented as constants in the `io.jsonwebtoken.Jwts.KEY` registry singleton as
 implementations of the `io.jsonwebtoken.security.KeyAlgorithm` interface.

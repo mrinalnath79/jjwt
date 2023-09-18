@@ -371,6 +371,7 @@ actually look like? Let's walk through a simplified version of the process with 
 +
 *header*
 +
+[,json]
 ----
 {
   "alg": "none"

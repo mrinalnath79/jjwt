@@ -56,4 +56,19 @@ class KeysBridgeTest {
     void testToStringPassword() {
         testFormattedOutput(new PasswordSpec("foo".toCharArray()))
     }
+
+    @Test
+    void testKeySize() {
+        assertEquals KeysBridge.findBitLength(TestKeys.HS256), 256
+    }
+
+    @Test
+    void testRS256PrivateKeySize() {
+        assertEquals KeysBridge.findBitLength(TestKeys.RS256.pair.private), 2048
+    }
+
+    @Test
+    void testRS256PublicKeySize() {
+        assertEquals KeysBridge.findBitLength(TestKeys.RS256.pair.public), 2048
+    }
 }
